@@ -1,0 +1,1865 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>SPW Engineering Consultants | Structural & Architectural Design</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="SPW Engineering Consultants provides structural design, inspections, retrofitting, project management and site investigations for residential, commercial and industrial buildings across Sri Lanka." />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --primary-blue: #0057B8;
+      --navy: #0B1F3B;
+      --accent-blue: #00A3C4;
+      --light-grey: #F4F6FA;
+      --mid-grey: #B4BEC9;
+      --text-dark: #1E242B;
+      --white: #FFFFFF;
+      --container-width: 1200px;
+      --radius-xl: 16px;
+      --shadow-soft: 0 12px 30px rgba(0, 0, 0, 0.08);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color: var(--text-dark);
+      background-color: #ffffff;
+      line-height: 1.6;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .container {
+      max-width: var(--container-width);
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+
+    /* Header / Nav */
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(11, 31, 59, 0.92);
+      backdrop-filter: blur(10px);
+      color: var(--white);
+    }
+
+    .nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0.9rem 0;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-family: "Poppins", sans-serif;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      font-size: 0.95rem;
+    }
+
+    .logo-mark {
+      width: 34px;
+      height: 34px;
+      border-radius: 999px;
+      background: linear-gradient(135deg, var(--primary-blue), var(--accent-blue));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.9rem;
+    }
+
+    .logo-mark span {
+      font-weight: 700;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 1.5rem;
+      align-items: center;
+      font-size: 0.95rem;
+    }
+
+    nav a {
+      color: var(--white);
+      opacity: 0.85;
+      transition: opacity 0.2s, color 0.2s;
+    }
+
+    nav a:hover {
+      opacity: 1;
+      color: var(--accent-blue);
+    }
+
+    .nav-cta {
+      padding: 0.55rem 1rem;
+      border-radius: 999px;
+      border: 1px solid rgba(255,255,255,0.5);
+      font-size: 0.9rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+
+    .nav-cta span {
+      font-size: 1.1rem;
+    }
+
+    .nav-toggle {
+      display: none;
+      flex-direction: column;
+      gap: 4px;
+      cursor: pointer;
+    }
+
+    .nav-toggle span {
+      width: 22px;
+      height: 2px;
+      background: var(--white);
+    }
+
+    /* Buttons */
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0.8rem 1.6rem;
+      border-radius: 999px;
+      border: none;
+      font-size: 0.95rem;
+      font-weight: 500;
+      cursor: pointer;
+      transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease, color 0.15s ease;
+      white-space: nowrap;
+    }
+
+    .btn-primary {
+      background: var(--primary-blue);
+      color: var(--white);
+      box-shadow: var(--shadow-soft);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-1px) scale(1.02);
+      box-shadow: 0 18px 40px rgba(0,0,0,0.14);
+    }
+
+    .btn-secondary {
+      background: transparent;
+      color: var(--primary-blue);
+      border: 1px solid var(--primary-blue);
+    }
+
+    .btn-secondary:hover {
+      background: var(--primary-blue);
+      color: var(--white);
+    }
+
+    /* Hero */
+
+    .hero {
+      position: relative;
+      background: radial-gradient(circle at top left, #0c3b7a 0, #020617 45%, #000 100%);
+      color: var(--white);
+      overflow: hidden;
+    }
+
+    .hero-inner {
+      display: grid;
+      grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr);
+      gap: 3rem;
+      align-items: center;
+      padding: 4.5rem 0 4rem;
+    }
+
+    .hero-eyebrow {
+      font-size: 0.8rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--accent-blue);
+      margin-bottom: 1rem;
+      font-weight: 600;
+    }
+
+    .hero h1 {
+      font-family: "Poppins", sans-serif;
+      font-size: 2.5rem;
+      line-height: 1.2;
+      margin-bottom: 1rem;
+    }
+
+    .hero p {
+      max-width: 520px;
+      font-size: 0.98rem;
+      opacity: 0.9;
+      margin-bottom: 1.5rem;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.9rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .hero-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.2rem;
+      font-size: 0.9rem;
+      opacity: 0.8;
+    }
+
+    .hero-meta span::before {
+      content: "• ";
+      opacity: 0.7;
+    }
+
+    .hero-visual {
+      position: relative;
+      min-height: 260px;
+    }
+
+    .hero-card {
+      position: relative;
+      background: rgba(15, 23, 42, 0.85);
+      border-radius: 20px;
+      padding: 1.5rem;
+      box-shadow: 0 18px 45px rgba(0,0,0,0.4);
+      border: 1px solid rgba(148, 163, 184, 0.3);
+    }
+
+    .hero-card-title {
+      font-family: "Poppins", sans-serif;
+      font-size: 1rem;
+      margin-bottom: 0.4rem;
+    }
+
+    .hero-card-sub {
+      font-size: 0.85rem;
+      color: #cbd5f5;
+      margin-bottom: 1rem;
+    }
+
+    .hero-chip-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .chip {
+      font-size: 0.75rem;
+      padding: 0.3rem 0.7rem;
+      border-radius: 999px;
+      background: rgba(2, 132, 199, 0.2);
+      border: 1px solid rgba(56, 189, 248, 0.4);
+      white-space: nowrap;
+    }
+
+    .hero-badge {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      color: #cbd5f5;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.2rem;
+    }
+
+    .hero-badge-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 999px;
+      background: #22c55e;
+      box-shadow: 0 0 12px rgba(34,197,94,0.8);
+    }
+
+    .hero-orbit {
+      position: absolute;
+      inset: -80px -40px;
+      pointer-events: none;
+      opacity: 0.45;
+      background:
+        radial-gradient(circle at 20% 20%, rgba(59,130,246,0.3), transparent 55%),
+        radial-gradient(circle at 70% 80%, rgba(45,212,191,0.18), transparent 60%);
+      mix-blend-mode: screen;
+    }
+
+    /* Sections */
+
+    section {
+      padding: 4rem 0;
+    }
+
+    .section-light {
+      background-color: var(--light-grey);
+    }
+
+    .section-title {
+      font-family: "Poppins", sans-serif;
+      font-size: 1.8rem;
+      margin-bottom: 0.6rem;
+    }
+
+    .section-subtitle {
+      max-width: 620px;
+      font-size: 0.98rem;
+      color: #4b5563;
+      margin-bottom: 2.2rem;
+    }
+
+    .section-header {
+      margin-bottom: 2.5rem;
+    }
+
+    .section-header-flex {
+      display: flex;
+      justify-content: space-between;
+      gap: 2rem;
+      align-items: flex-end;
+      margin-bottom: 2rem;
+    }
+
+    /* Grid helpers */
+
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 1.6rem;
+    }
+
+    .grid-2 {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 1.6rem;
+    }
+
+    .grid-4 {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 1.4rem;
+    }
+
+    @media (max-width: 900px) {
+      .hero-inner {
+        grid-template-columns: minmax(0, 1fr);
+        padding-top: 3.2rem;
+      }
+      .section-header-flex {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .grid-3,
+      .grid-4 {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 640px) {
+      .grid-2,
+      .grid-3,
+      .grid-4 {
+        grid-template-columns: minmax(0, 1fr);
+      }
+    }
+
+    /* Cards */
+
+    .card {
+      background: var(--white);
+      border-radius: var(--radius-xl);
+      padding: 1.6rem 1.5rem;
+      box-shadow: 0 10px 26px rgba(15,23,42,0.06);
+      border: 1px solid rgba(148, 163, 184, 0.3);
+    }
+
+    .card-title {
+      font-family: "Poppins", sans-serif;
+      font-size: 1rem;
+      margin-bottom: 0.4rem;
+    }
+
+    .card-tag {
+      font-size: 0.78rem;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: #6b7280;
+      margin-bottom: 0.5rem;
+    }
+
+    .card-text {
+      font-size: 0.9rem;
+      color: #4b5563;
+      margin-bottom: 0.7rem;
+    }
+
+    .card-link {
+      font-size: 0.9rem;
+      color: var(--primary-blue);
+      display: inline-flex;
+      align-items: center;
+      gap: 0.3rem;
+    }
+
+    .card-link span {
+      font-size: 1rem;
+    }
+
+    /* Values */
+
+    .values-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 1.4rem;
+    }
+
+    @media (max-width: 900px) {
+      .values-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 640px) {
+      .values-grid {
+        grid-template-columns: minmax(0, 1fr);
+      }
+    }
+
+    /* About: team */
+
+    .team-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 1.6rem;
+    }
+
+    @media (max-width: 900px) {
+      .team-grid {
+        grid-template-columns: minmax(0, 1fr);
+      }
+    }
+
+    .team-card {
+      display: grid;
+      grid-template-columns: 80px minmax(0, 1fr);
+      gap: 1rem;
+      align-items: flex-start;
+    }
+
+    .avatar {
+      width: 80px;
+      height: 80px;
+      border-radius: 999px;
+      background: linear-gradient(135deg, var(--primary-blue), var(--accent-blue));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--white);
+      font-family: "Poppins", sans-serif;
+      font-weight: 600;
+      font-size: 1.1rem;
+    }
+
+    .team-role {
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 0.11em;
+      color: #6b7280;
+      margin-bottom: 0.1rem;
+    }
+
+    .team-name {
+      font-family: "Poppins", sans-serif;
+      font-size: 1rem;
+      margin-bottom: 0.2rem;
+    }
+
+    .team-text {
+      font-size: 0.9rem;
+      color: #4b5563;
+    }
+
+    /* Projects */
+
+    .project-card {
+      background: var(--white);
+      border-radius: var(--radius-xl);
+      box-shadow: 0 10px 26px rgba(15,23,42,0.06);
+      border: 1px solid rgba(148,163,184,0.3);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .project-thumb {
+      height: 150px;
+      background: linear-gradient(135deg, #0ea5e9, #1d4ed8);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: rgba(255,255,255,0.85);
+      font-size: 0.9rem;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+    }
+
+    .project-body {
+      padding: 1.2rem 1.3rem 1.3rem;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 0.4rem;
+    }
+
+    .project-meta {
+      font-size: 0.8rem;
+      color: #6b7280;
+    }
+
+    .project-title {
+      font-family: "Poppins", sans-serif;
+      font-size: 1rem;
+    }
+
+    .project-type {
+      font-size: 0.78rem;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: #9ca3af;
+    }
+
+    .project-desc {
+      font-size: 0.9rem;
+      color: #4b5563;
+      margin-top: 0.3rem;
+      margin-bottom: 0.4rem;
+    }
+
+    .project-footer {
+      margin-top: auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 0.85rem;
+      color: var(--primary-blue);
+      cursor: pointer;
+    }
+
+    .project-footer span {
+      font-size: 1rem;
+    }
+
+    .project-badge-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+      margin-top: 0.3rem;
+    }
+
+    .project-badge {
+      font-size: 0.72rem;
+      padding: 0.2rem 0.55rem;
+      border-radius: 999px;
+      background: #eff6ff;
+      color: #1d4ed8;
+    }
+
+    /* Tabs / categories */
+
+    .project-tabs {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .tab-pill {
+      padding: 0.4rem 0.9rem;
+      border-radius: 999px;
+      border: 1px solid #d1d5db;
+      font-size: 0.83rem;
+      cursor: pointer;
+      background: #f9fafb;
+    }
+
+    .tab-pill.active {
+      border-color: var(--primary-blue);
+      background: #eff6ff;
+      color: var(--primary-blue);
+    }
+
+    /* Detail project sections */
+
+    .project-detail {
+      display: none;
+      margin-top: 1.5rem;
+    }
+
+    .project-detail.active {
+      display: block;
+    }
+
+    .detail-meta-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+      font-size: 0.86rem;
+      color: #6b7280;
+      margin-bottom: 0.8rem;
+    }
+
+    .detail-columns {
+      display: grid;
+      grid-template-columns: 1.4fr 1fr;
+      gap: 1.5rem;
+    }
+
+    @media (max-width: 900px) {
+      .detail-columns {
+        grid-template-columns: minmax(0, 1fr);
+      }
+    }
+
+    .detail-heading {
+      font-family: "Poppins", sans-serif;
+      font-size: 1.1rem;
+      margin-bottom: 0.4rem;
+    }
+
+    .detail-list {
+      font-size: 0.9rem;
+      color: #4b5563;
+      padding-left: 1.1rem;
+    }
+
+    .detail-list li {
+      margin-bottom: 0.25rem;
+    }
+
+    /* CTA band */
+
+    .cta-band {
+      background: linear-gradient(135deg, #0b1f3b, #020617);
+      color: var(--white);
+      border-radius: 20px;
+      padding: 2rem;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1.6rem;
+      box-shadow: var(--shadow-soft);
+    }
+
+    .cta-band-title {
+      font-family: "Poppins", sans-serif;
+      font-size: 1.4rem;
+      margin-bottom: 0.4rem;
+    }
+
+    .cta-band-text {
+      font-size: 0.95rem;
+      opacity: 0.85;
+    }
+
+    .cta-band-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.8rem;
+    }
+
+    /* About: process / why us */
+
+    .two-col {
+      display: grid;
+      grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr);
+      gap: 1.8rem;
+    }
+
+    @media (max-width: 900px) {
+      .two-col {
+        grid-template-columns: minmax(0, 1fr);
+      }
+    }
+
+    .list-check {
+      font-size: 0.9rem;
+      color: #4b5563;
+      padding-left: 1.1rem;
+    }
+
+    .list-check li {
+      margin-bottom: 0.4rem;
+      position: relative;
+    }
+
+    .list-check li::before {
+      content: "✓";
+      position: absolute;
+      left: -1.1rem;
+      color: var(--primary-blue);
+      font-size: 0.9rem;
+      top: 0.1rem;
+    }
+
+    .steps {
+      font-size: 0.9rem;
+      color: #4b5563;
+      padding-left: 1.4rem;
+    }
+
+    .steps li {
+      margin-bottom: 0.4rem;
+    }
+
+    /* Contact */
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.1fr) minmax(0, 1.2fr);
+      gap: 2rem;
+    }
+
+    @media (max-width: 900px) {
+      .contact-grid {
+        grid-template-columns: minmax(0, 1fr);
+      }
+    }
+
+    .contact-item {
+      margin-bottom: 0.7rem;
+      font-size: 0.93rem;
+    }
+
+    .contact-label {
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      color: #6b7280;
+    }
+
+    .contact-value {
+      font-size: 0.95rem;
+      font-weight: 500;
+    }
+
+    .contact-form {
+      background: var(--white);
+      border-radius: var(--radius-xl);
+      padding: 1.8rem 1.5rem;
+      box-shadow: 0 10px 26px rgba(15,23,42,0.06);
+      border: 1px solid rgba(148,163,184,0.3);
+    }
+
+    .form-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 1rem;
+      margin-bottom: 1rem;
+    }
+
+    @media (max-width: 640px) {
+      .form-grid {
+        grid-template-columns: minmax(0, 1fr);
+      }
+    }
+
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      gap: 0.35rem;
+    }
+
+    label {
+      font-size: 0.82rem;
+      font-weight: 500;
+      color: #4b5563;
+    }
+
+    input, select, textarea {
+      border-radius: 10px;
+      border: 1px solid #d1d5db;
+      padding: 0.6rem 0.7rem;
+      font-size: 0.9rem;
+      font-family: inherit;
+      outline: none;
+      transition: border-color 0.15s, box-shadow 0.15s;
+    }
+
+    input:focus, select:focus, textarea:focus {
+      border-color: var(--primary-blue);
+      box-shadow: 0 0 0 1px rgba(37,99,235,0.22);
+    }
+
+    textarea {
+      resize: vertical;
+      min-height: 120px;
+    }
+
+    .form-note {
+      font-size: 0.78rem;
+      color: #6b7280;
+      margin-top: 0.5rem;
+    }
+
+    /* Footer */
+
+    footer {
+      background: #020617;
+      color: #9ca3af;
+      padding: 2.5rem 0 1.8rem;
+      font-size: 0.85rem;
+      margin-top: 2rem;
+    }
+
+    .footer-top {
+      display: grid;
+      grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr);
+      gap: 2rem;
+      margin-bottom: 1.8rem;
+    }
+
+    @media (max-width: 900px) {
+      .footer-top {
+        grid-template-columns: minmax(0, 1fr);
+      }
+    }
+
+    .footer-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.9rem 1.5rem;
+      margin-bottom: 0.6rem;
+    }
+
+    .footer-links a {
+      color: #e5e7eb;
+      opacity: 0.8;
+    }
+
+    .footer-links a:hover {
+      opacity: 1;
+      color: var(--accent-blue);
+    }
+
+    .footer-bottom {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 1rem;
+      border-top: 1px solid rgba(55,65,81,0.7);
+      padding-top: 1rem;
+      font-size: 0.8rem;
+    }
+
+    /* WhatsApp floating button */
+
+    .wa-floating {
+      position: fixed;
+      right: 1.2rem;
+      bottom: 1.3rem;
+      z-index: 120;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: #22c55e;
+      color: #ffffff;
+      padding: 0.7rem 1.1rem;
+      border-radius: 999px;
+      font-size: 0.9rem;
+      box-shadow: 0 18px 40px rgba(22,163,74,0.45);
+    }
+
+    .wa-floating span {
+      font-size: 1.2rem;
+    }
+
+    .wa-floating:hover {
+      transform: translateY(-1px);
+    }
+
+    @media (max-width: 640px) {
+      .wa-floating {
+        padding-inline: 0.85rem;
+      }
+      .wa-floating-text {
+        display: none;
+      }
+    }
+
+    /* Mobile nav */
+
+    @media (max-width: 900px) {
+      nav ul {
+        position: absolute;
+        top: 100%;
+        right: 0;
+        left: 0;
+        flex-direction: column;
+        background: rgba(15,23,42,0.96);
+        padding: 0.9rem 1.5rem 1.2rem;
+        display: none;
+      }
+
+      nav ul.open {
+        display: flex;
+      }
+
+      .nav-toggle {
+        display: flex;
+      }
+
+      .nav-cta {
+        margin-top: 0.4rem;
+      }
+    }
+  </style>
+
+  <!-- Schema.org JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "SPW Engineering Consultants",
+    "url": "https://www.spweng.lk",
+    "telephone": "+94769988181",
+    "email": "contact@spweng.lk",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "1B/F9/U1, Lakhiru Sewana, Sri Saddarma Mw.",
+      "addressLocality": "Colombo 10",
+      "addressCountry": "LK"
+    },
+    "areaServed": "LK",
+    "priceRange": "$$"
+  }
+  </script>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="container nav">
+      <div class="logo">
+        <div class="logo-mark"><span>SPW</span></div>
+        <div>
+          <div style="font-size:0.86rem;">SPW ENGINEERING</div>
+          <div style="font-size:0.72rem; opacity:0.8;">Consultants</div>
+        </div>
+      </div>
+
+      <div class="nav-toggle" id="navToggle">
+        <span></span><span></span><span></span>
+      </div>
+
+      <nav>
+        <ul id="navMenu">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li>
+            <a href="#contact" class="nav-cta">
+              <span>●</span> Request Consultation
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero / Home -->
+    <section class="hero" id="home">
+      <div class="container hero-inner">
+        <div>
+          <div class="hero-eyebrow">STRUCTURAL &amp; ARCHITECTURAL CONSULTANCY · SRI LANKA</div>
+          <h1>Innovative Structural &amp; Architectural Solutions for a Better Built Environment.</h1>
+          <p>
+            SPW Engineering Consultants delivers safe, efficient and aesthetically refined designs for residential, commercial
+            and industrial projects across Sri Lanka.
+          </p>
+          <div class="hero-actions">
+            <a href="#contact" class="btn btn-primary">Request a Consultation</a>
+            <a href="#projects" class="btn btn-secondary">View Our Projects</a>
+          </div>
+          <div class="hero-meta">
+            <span>+94 76 99 88 181</span>
+            <span>contact@spweng.lk</span>
+            <span>Colombo 10, Sri Lanka</span>
+          </div>
+        </div>
+
+        <div class="hero-visual">
+          <div class="hero-orbit"></div>
+          <div class="hero-card">
+            <div class="hero-card-title">Engineering-grade design for real-world projects.</div>
+            <div class="hero-card-sub">
+              Chartered structural expertise for homes, warehouses, commercial spaces and complex retrofits.
+            </div>
+            <div class="hero-chip-row">
+              <div class="chip">Structural Design &amp; Analysis</div>
+              <div class="chip">Retrofitting &amp; Rehabilitation</div>
+              <div class="chip">Seismic &amp; Wind Load Analysis</div>
+              <div class="chip">Project Management</div>
+            </div>
+            <div class="hero-badge">
+              <span class="hero-badge-dot"></span>
+              <span>Active projects in residential, commercial &amp; industrial sectors</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- What We Do / Services summary -->
+    <section id="services">
+      <div class="container">
+        <div class="section-header-flex">
+          <div>
+            <h2 class="section-title">What We Do</h2>
+            <p class="section-subtitle">
+              We provide end-to-end architectural and structural consultancy services, from initial feasibility studies
+              to construction documentation and on-site support.
+            </p>
+          </div>
+          <div>
+            <a href="#services-full" class="btn btn-secondary">View All Services</a>
+          </div>
+        </div>
+
+        <div class="grid-3">
+          <div class="card">
+            <div class="card-tag">Structural Design &amp; Analysis</div>
+            <div class="card-title">Optimised, code-compliant structures.</div>
+            <p class="card-text">
+              Safe, economical structural schemes for residential, commercial and industrial buildings,
+              balancing safety, efficiency and constructability.
+            </p>
+            <a class="card-link" href="#services-full">Learn more <span>→</span></a>
+          </div>
+
+          <div class="card">
+            <div class="card-tag">Retrofitting &amp; Rehabilitation</div>
+            <div class="card-title">Extending the life of existing assets.</div>
+            <p class="card-text">
+              Strengthening and upgrading existing buildings to meet current performance and safety standards
+              without full reconstruction.
+            </p>
+            <a class="card-link" href="#services-full">Learn more <span>→</span></a>
+          </div>
+
+          <div class="card">
+            <div class="card-tag">Seismic &amp; Wind Load Analysis</div>
+            <div class="card-title">Resilience under lateral loads.</div>
+            <p class="card-text">
+              Specialist analysis of buildings under wind and seismic actions to ensure performance, comfort and code compliance.
+            </p>
+            <a class="card-link" href="#services-full">Learn more <span>→</span></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Featured Projects -->
+    <section class="section-light" id="projects">
+      <div class="container">
+        <div class="section-header-flex">
+          <div>
+            <h2 class="section-title">Featured Projects</h2>
+            <p class="section-subtitle">
+              From bespoke homes to complex industrial renovations, SPW delivers engineered solutions tailored to each client and site.
+            </p>
+          </div>
+          <div class="project-tabs">
+            <button class="tab-pill active" data-project-filter="all">All</button>
+            <button class="tab-pill" data-project-filter="commercial">Commercial</button>
+            <button class="tab-pill" data-project-filter="residential">Residential</button>
+            <button class="tab-pill" data-project-filter="industrial">Industrial</button>
+            <button class="tab-pill" data-project-filter="renovation">Renovation &amp; Retrofit</button>
+          </div>
+        </div>
+
+        <div class="grid-4" id="projectGrid">
+          <!-- Dragon Arrow -->
+          <div class="project-card" data-category="industrial renovation special">
+            <div class="project-thumb">
+              Warehouse · Structural Retrofit
+            </div>
+            <div class="project-body">
+              <div class="project-meta">Wellampitiya · 2025</div>
+              <div class="project-title">Warehouse Modification – Dragon Arrow (Pvt.) Ltd.</div>
+              <div class="project-type">Industrial · Renovation &amp; Retrofit</div>
+              <p class="project-desc">
+                Structural modifications and new roof trusses to accommodate production machinery while working within an existing shell.
+              </p>
+              <div class="project-badge-row">
+                <span class="project-badge">Warehouse</span>
+                <span class="project-badge">Retrofit</span>
+              </div>
+              <div class="project-footer" data-detail-target="dragon-arrow">
+                <span>View project</span>
+                <span>→</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Ahangama Residence -->
+          <div class="project-card" data-category="residential">
+            <div class="project-thumb" style="background:linear-gradient(135deg,#22c55e,#15803d);">
+              Coastal Residence
+            </div>
+            <div class="project-body">
+              <div class="project-meta">Ahangama · 2025</div>
+              <div class="project-title">Residential House – Ahangama</div>
+              <div class="project-type">Residential · New Build</div>
+              <p class="project-desc">
+                Three-storey residence with full architectural and structural design, optimised for coastal conditions and family living.
+              </p>
+              <div class="project-badge-row">
+                <span class="project-badge">Architectural</span>
+                <span class="project-badge">Structural Design</span>
+              </div>
+              <div class="project-footer" data-detail-target="ahangama">
+                <span>View project</span>
+                <span>→</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Weligama Commercial Renovation -->
+          <div class="project-card" data-category="commercial renovation special">
+            <div class="project-thumb" style="background:linear-gradient(135deg,#f97316,#c2410c);">
+              Vertical Extension
+            </div>
+            <div class="project-body">
+              <div class="project-meta">Weligama · 2024</div>
+              <div class="project-title">Commercial Building Renovation – Weligama</div>
+              <div class="project-type">Commercial · Vertical Extension</div>
+              <p class="project-desc">
+                Structural and architectural consultation to safely add upper storeys to an existing commercial building.
+              </p>
+              <div class="project-badge-row">
+                <span class="project-badge">Commercial</span>
+                <span class="project-badge">Vertical Extension</span>
+              </div>
+              <div class="project-footer" data-detail-target="weligama">
+                <span>View project</span>
+                <span>→</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Wattala Residential Renovation -->
+          <div class="project-card" data-category="residential renovation">
+            <div class="project-thumb" style="background:linear-gradient(135deg,#6366f1,#4338ca);">
+              Residential Retrofit
+            </div>
+            <div class="project-body">
+              <div class="project-meta">Wattala · 2024</div>
+              <div class="project-title">Residential Renovation – Wattala</div>
+              <div class="project-type">Residential · Renovation</div>
+              <p class="project-desc">
+                Rear extension and new rooftop structure with cost estimation support for an occupied residence.
+              </p>
+              <div class="project-badge-row">
+                <span class="project-badge">Renovation</span>
+                <span class="project-badge">Rooftop Structure</span>
+              </div>
+              <div class="project-footer" data-detail-target="wattala">
+                <span>View project</span>
+                <span>→</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project Details -->
+        <div id="projectDetails">
+          <!-- Dragon Arrow detail -->
+          <div class="project-detail" id="detail-dragon-arrow">
+            <hr style="margin:2rem 0 1.5rem; border:none; border-top:1px solid #e5e7eb;">
+            <h3 class="detail-heading">Warehouse Modification – Dragon Arrow (Pvt.) Ltd.</h3>
+            <div class="detail-meta-row">
+              <div><strong>Year:</strong> 2025</div>
+              <div><strong>Type:</strong> Industrial · Renovation &amp; Retrofit</div>
+              <div><strong>Location:</strong> Wellampitiya, Sri Lanka</div>
+              <div><strong>Scope:</strong> Structural assessment, modification design, documentation</div>
+            </div>
+            <div class="detail-columns">
+              <div>
+                <p style="font-size:0.92rem; color:#4b5563; margin-bottom:0.7rem;">
+                  SPW was appointed to redesign an existing warehouse to accommodate new production machinery for Dragon Arrow (Pvt.) Ltd.
+                  The project required major internal reconfiguration while maintaining the existing envelope and operational constraints.
+                </p>
+                <h4 class="detail-heading" style="font-size:0.95rem;">Scope of Work</h4>
+                <ul class="detail-list">
+                  <li>Structural assessment of existing warehouse and load paths.</li>
+                  <li>Design of new roof trusses and support members for clear-span machinery areas.</li>
+                  <li>Design for removal of internal walls and redistribution of loads.</li>
+                  <li>Construction documentation and detailing for structural modifications.</li>
+                </ul>
+              </div>
+              <div>
+                <h4 class="detail-heading" style="font-size:0.95rem;">Engineering Highlights</h4>
+                <ul class="detail-list">
+                  <li>Sequenced modification strategy to minimise downtime and disruption to operations.</li>
+                  <li>Optimised steel truss layout to achieve required clear heights within existing geometrical constraints.</li>
+                  <li>Enhanced structural performance while respecting existing foundations and supports.</li>
+                  <li>Clear, buildable drawings to guide contractors through phased strengthening works.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- Ahangama detail -->
+          <div class="project-detail" id="detail-ahangama">
+            <hr style="margin:2rem 0 1.5rem; border:none; border-top:1px solid #e5e7eb;">
+            <h3 class="detail-heading">Residential House – Ahangama</h3>
+            <div class="detail-meta-row">
+              <div><strong>Year:</strong> 2025</div>
+              <div><strong>Type:</strong> Residential · New Build</div>
+              <div><strong>Location:</strong> Ahangama, Sri Lanka</div>
+              <div><strong>Scope:</strong> Architectural and structural design, project management</div>
+            </div>
+            <div class="detail-columns">
+              <div>
+                <p style="font-size:0.92rem; color:#4b5563; margin-bottom:0.7rem;">
+                  SPW provided full architectural and structural consultancy for a three-storey coastal residence in Ahangama.
+                  The design harmonises open-plan living spaces with robust structural solutions suited to the coastal environment.
+                </p>
+                <h4 class="detail-heading" style="font-size:0.95rem;">Scope of Work</h4>
+                <ul class="detail-list">
+                  <li>Architectural concept development and detailed design.</li>
+                  <li>Structural design and analysis of frames, slabs and foundations.</li>
+                  <li>Preparation of construction drawings and reinforcement detailing.</li>
+                  <li>Overall project management and coordination with contractors.</li>
+                </ul>
+              </div>
+              <div>
+                <h4 class="detail-heading" style="font-size:0.95rem;">Engineering Highlights</h4>
+                <ul class="detail-list">
+                  <li>Efficient structural grid aligned with architectural planning and services routes.</li>
+                  <li>Durable detailing and material choices for coastal exposure conditions.</li>
+                  <li>Balanced structural stiffness for comfort under wind actions.</li>
+                  <li>Close coordination between design and site teams ensuring smooth delivery.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- Weligama detail -->
+          <div class="project-detail" id="detail-weligama">
+            <hr style="margin:2rem 0 1.5rem; border:none; border-top:1px solid #e5e7eb;">
+            <h3 class="detail-heading">Commercial Building Renovation – Weligama</h3>
+            <div class="detail-meta-row">
+              <div><strong>Year:</strong> 2024</div>
+              <div><strong>Type:</strong> Commercial · Vertical Extension</div>
+              <div><strong>Location:</strong> Weligama, Sri Lanka</div>
+              <div><strong>Scope:</strong> Structural and architectural consultation, strengthening design</div>
+            </div>
+            <div class="detail-columns">
+              <div>
+                <p style="font-size:0.92rem; color:#4b5563; margin-bottom:0.7rem;">
+                  The client sought to add two additional floors to an existing two-storey commercial building.
+                  SPW was engaged to provide structural and architectural input for the safe vertical extension and reconfiguration.
+                </p>
+                <h4 class="detail-heading" style="font-size:0.95rem;">Scope of Work</h4>
+                <ul class="detail-list">
+                  <li>Assessment of existing structure, foundations and allowable capacities.</li>
+                  <li>Structural design for additional storeys and strengthening measures.</li>
+                  <li>Architectural layout optimisation for new floors and circulation.</li>
+                  <li>Construction documentation and detailing for extension works.</li>
+                </ul>
+              </div>
+              <div>
+                <h4 class="detail-heading" style="font-size:0.95rem;">Engineering Highlights</h4>
+                <ul class="detail-list">
+                  <li>Feasibility study to validate safe vertical expansion options.</li>
+                  <li>Strengthening strategy to support new loads within site and cost constraints.</li>
+                  <li>Integration of new elements with minimal disruption to existing tenants.</li>
+                  <li>Practical detailing to enable phased construction and safe operations.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- Wattala detail -->
+          <div class="project-detail" id="detail-wattala">
+            <hr style="margin:2rem 0 1.5rem; border:none; border-top:1px solid #e5e7eb;">
+            <h3 class="detail-heading">Residential Renovation – Wattala</h3>
+            <div class="detail-meta-row">
+              <div><strong>Year:</strong> 2024</div>
+              <div><strong>Type:</strong> Residential · Renovation</div>
+              <div><strong>Location:</strong> Wattala, Sri Lanka</div>
+              <div><strong>Scope:</strong> Structural design, roof structure, cost estimation</div>
+            </div>
+            <div class="detail-columns">
+              <div>
+                <p style="font-size:0.92rem; color:#4b5563; margin-bottom:0.7rem;">
+                  SPW was commissioned to extend an existing residential building and design a new roof structure at rooftop level,
+                  adding usable area while retaining the existing fabric where possible.
+                </p>
+                <h4 class="detail-heading" style="font-size:0.95rem;">Scope of Work</h4>
+                <ul class="detail-list">
+                  <li>Structural design for rear extension and new rooftop structure.</li>
+                  <li>Evaluation of existing building capacities and connection details.</li>
+                  <li>Preparation of reinforcement details and construction drawings.</li>
+                  <li>Cost estimation and quantity take-offs to support budgeting.</li>
+                </ul>
+              </div>
+              <div>
+                <h4 class="detail-heading" style="font-size:0.95rem;">Engineering Highlights</h4>
+                <ul class="detail-list">
+                  <li>Careful integration of new loads with the existing structural system.</li>
+                  <li>Buildable solutions designed around constrained access and an occupied house.</li>
+                  <li>Cost-conscious design aligned with client budgets and phasing.</li>
+                  <li>Improved usability and value of the property without full reconstruction.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Core Values & Why SPW -->
+    <section>
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Our Core Values</h2>
+          <p class="section-subtitle">
+            Our work is guided by a set of principles that ensure every project is engineered with care, transparency and technical rigour.
+          </p>
+        </div>
+
+        <div class="values-grid">
+          <div class="card">
+            <div class="card-title">Innovation</div>
+            <p class="card-text">
+              We embrace creative thinking and new technologies to deliver modern, efficient structural and architectural solutions.
+            </p>
+          </div>
+          <div class="card">
+            <div class="card-title">Quality</div>
+            <p class="card-text">
+              We uphold high engineering standards, meticulous calculations and clear documentation on every project.
+            </p>
+          </div>
+          <div class="card">
+            <div class="card-title">Integrity</div>
+            <p class="card-text">
+              Transparency, honesty and professionalism shape how we advise clients and collaborate with project teams.
+            </p>
+          </div>
+          <div class="card">
+            <div class="card-title">Client-Centric Approach</div>
+            <p class="card-text">
+              We listen first, then design around your goals, constraints and long-term operational needs.
+            </p>
+          </div>
+          <div class="card">
+            <div class="card-title">Timely Delivery</div>
+            <p class="card-text">
+              Structured processes and clear coordination help us deliver on time without compromising engineering quality.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section class="section-light" id="about">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">About SPW Engineering Consultants</h2>
+          <p class="section-subtitle">
+            SPW is a dynamic consultancy providing architectural and structural design as well as engineering services
+            for domestic and commercial clients in Sri Lanka.
+          </p>
+        </div>
+
+        <div class="two-col" style="margin-bottom:2.5rem;">
+          <div>
+            <p style="font-size:0.95rem; color:#4b5563; margin-bottom:0.9rem;">
+              Based in Colombo, SPW Engineering Consultants offers tailored engineering solutions that combine safety,
+              functionality and aesthetics. With more than a decade of combined professional experience, our team
+              supports projects from early feasibility through to construction support.
+            </p>
+            <p style="font-size:0.95rem; color:#4b5563;">
+              We work across residential, commercial and industrial sectors, including new builds, renovations and
+              complex retrofits. Each project is approached with careful analysis, clear communication and a strong
+              focus on buildability and long-term performance.
+            </p>
+          </div>
+          <div>
+            <div class="card" style="height:100%;">
+              <div class="card-tag">Vision · Mission · Values</div>
+              <div class="card-title">Our Direction</div>
+              <p class="card-text" style="margin-bottom:0.4rem;">
+                <strong>Vision:</strong> To be a leading consultancy providing innovative, sustainable and high-quality
+                architectural and structural solutions that enhance the built environment.
+              </p>
+              <p class="card-text">
+                <strong>Mission:</strong> To deliver exceptional architectural and structural design services that ensure
+                safety, functionality and aesthetic excellence. We strive to exceed expectations through expert consultancy,
+                innovation and a commitment to engineering excellence for domestic and commercial clients.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Why SPW + Process -->
+        <div class="two-col" style="margin-bottom:2.5rem;">
+          <div>
+            <h3 class="detail-heading">Why Choose SPW?</h3>
+            <ul class="list-check">
+              <li>Led by chartered and professionally qualified engineers with local experience.</li>
+              <li>Multi-disciplinary expertise across structural design, geotechnical, QS and drafting.</li>
+              <li>Proven work on warehouses, commercial spaces and residential developments.</li>
+              <li>Strong focus on constructability, cost efficiency and long-term performance.</li>
+              <li>Direct access to senior engineers and clear communication throughout the project.</li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="detail-heading">Our Process</h3>
+            <ol class="steps">
+              <li><strong>Initial Consultation</strong> – Understanding project objectives, constraints and budget.</li>
+              <li><strong>Site &amp; Feasibility Studies</strong> – Reviewing existing conditions, risks and opportunities.</li>
+              <li><strong>Concept &amp; Preliminary Design</strong> – Exploring structural and architectural options.</li>
+              <li><strong>Detailed Design &amp; Documentation</strong> – Producing calculations, drawings and specifications.</li>
+              <li><strong>Construction Support</strong> – Providing clarifications, inspections and adjustments as required.</li>
+            </ol>
+          </div>
+        </div>
+
+        <!-- Team -->
+        <div class="section-header" style="margin-bottom:1.5rem;">
+          <h3 class="section-title" style="font-size:1.5rem;">Leadership &amp; Core Team</h3>
+        </div>
+
+        <div class="team-grid">
+          <div class="card">
+            <div class="team-card">
+              <div class="avatar">MR</div>
+              <div>
+                <div class="team-role">Chartered Structural Engineer</div>
+                <div class="team-name">Eng. Madhuka Rathnayaka</div>
+                <p class="team-text">
+                  Chartered Structural Engineer with over 8 years of experience in designing safe, efficient structures.
+                  Holds a B.Sc. in Engineering from the University of Moratuwa and postgraduate diplomas in Construction
+                  Management and Geotechnical Engineering. Leads structural strategy and quality assurance.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="team-card">
+              <div class="avatar">SH</div>
+              <div>
+                <div class="team-role">Structural Design Engineer</div>
+                <div class="team-name">Eng. Sampath Harshana</div>
+                <p class="team-text">
+                  Structural Engineer with 4 years of experience in structural design and analysis. Graduate of the
+                  University of Moratuwa with a Postgraduate Diploma in Geotechnical Engineering. Specialises in optimised
+                  structural schemes for residential, commercial and industrial buildings.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="team-card">
+              <div class="avatar">UM</div>
+              <div>
+                <div class="team-role">Quantity Surveyor</div>
+                <div class="team-name">Qs. Umesh Mihiran</div>
+                <p class="team-text">
+                  Quantity Surveyor with 3 years of industry experience. Holds a B.Sc. in Quantity Surveying and a
+                  Postgraduate Diploma in Project Management. Supports cost planning, BOQs, tender documentation and value engineering.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="team-card">
+              <div class="avatar">NP</div>
+              <div>
+                <div class="team-role">Engineering Draftsperson</div>
+                <div class="team-name">Mr. Nalinda Priyankara</div>
+                <p class="team-text">
+                  Draftsperson with over 10 years of experience. Holds a National Certificate in Engineering Draftsmanship and a
+                  Diploma in Quantity Surveying. Produces precise structural and architectural drawings that translate concepts into buildable documentation.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Full Services -->
+    <section id="services-full">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Services</h2>
+          <p class="section-subtitle">
+            SPW provides a complete range of structural and architectural consultancy services for residential, commercial
+            and industrial projects, tailored to statutory requirements, site conditions and your performance objectives.
+          </p>
+        </div>
+
+        <div class="grid-3">
+          <!-- Structural Design & Analysis -->
+          <div class="card">
+            <div class="card-tag">Service 01</div>
+            <div class="card-title">Structural Design &amp; Analysis</div>
+            <p class="card-text">
+              We develop safe, economical and buildable structural systems using industry-standard design codes and advanced analysis tools.
+            </p>
+            <p class="card-text"><strong>Key benefits:</strong> Optimised member sizes and layouts, reduced material waste, clear drawings and calculations.</p>
+            <p class="card-text"><strong>Applications:</strong> New residential, commercial and industrial buildings, multi-storey and long-span structures.</p>
+          </div>
+
+          <!-- Site Investigations -->
+          <div class="card">
+            <div class="card-tag">Service 02</div>
+            <div class="card-title">Site Investigations</div>
+            <p class="card-text">
+              Comprehensive investigations of ground conditions, existing structures and site constraints to inform safe and efficient designs.
+            </p>
+            <p class="card-text"><strong>Key benefits:</strong> Informed design decisions, reduced risk, better cost and programme certainty.</p>
+            <p class="card-text"><strong>Applications:</strong> New developments, extensions, pre-purchase due diligence.</p>
+          </div>
+
+          <!-- Construction Documentation -->
+          <div class="card">
+            <div class="card-tag">Service 03</div>
+            <div class="card-title">Construction Documentation</div>
+            <p class="card-text">
+              Detailed drawings, specifications and tender documents that communicate design intent clearly to contractors.
+            </p>
+            <p class="card-text"><strong>Key benefits:</strong> Fewer RFIs, reduced rework and strong basis for accurate pricing.</p>
+            <p class="card-text"><strong>Applications:</strong> Architectural/structural drawings, reinforcement detailing, BOQs and specifications.</p>
+          </div>
+
+          <!-- Structural Inspections -->
+          <div class="card">
+            <div class="card-tag">Service 04</div>
+            <div class="card-title">Structural Inspections</div>
+            <p class="card-text">
+              Inspection and assessment of existing buildings to evaluate safety, durability and code compliance.
+            </p>
+            <p class="card-text"><strong>Key benefits:</strong> Clear understanding of condition, practical recommendations, support for approvals.</p>
+            <p class="card-text"><strong>Applications:</strong> Condition surveys, pre/post-occupancy inspections, post-damage assessments.</p>
+          </div>
+
+          <!-- Retrofitting & Rehabilitation -->
+          <div class="card">
+            <div class="card-tag">Service 05</div>
+            <div class="card-title">Retrofitting &amp; Rehabilitation</div>
+            <p class="card-text">
+              Engineering solutions to strengthen, stabilise or extend the life of existing structures.
+            </p>
+            <p class="card-text"><strong>Key benefits:</strong> Extend building life, improve safety and performance, cost-effective alternative to new build.</p>
+            <p class="card-text"><strong>Applications:</strong> Additional floors, upgrades for older buildings, post-deterioration repairs.</p>
+          </div>
+
+          <!-- Project Management -->
+          <div class="card">
+            <div class="card-tag">Service 06</div>
+            <div class="card-title">Project Management</div>
+            <p class="card-text">
+              Coordination and oversight of project scope, time, cost and quality from planning through completion.
+            </p>
+            <p class="card-text"><strong>Key benefits:</strong> Single point of contact, reduced delays and variations, clear tracking of progress.</p>
+            <p class="card-text"><strong>Applications:</strong> Residential and commercial projects, renovations with live operations.</p>
+          </div>
+
+          <!-- Seismic & Wind Load Analysis -->
+          <div class="card">
+            <div class="card-tag">Service 07</div>
+            <div class="card-title">Seismic &amp; Wind Load Analysis</div>
+            <p class="card-text">
+              Specialised analysis of structural behaviour under seismic and wind actions to ensure resilience and serviceability.
+            </p>
+            <p class="card-text"><strong>Key benefits:</strong> Code-compliant designs, reduced risk of damage, optimised lateral systems.</p>
+            <p class="card-text"><strong>Applications:</strong> Mid-/high-rise buildings, industrial warehouses, structures in high wind/seismic areas.</p>
+          </div>
+
+          <!-- Value Engineering -->
+          <div class="card">
+            <div class="card-tag">Service 08</div>
+            <div class="card-title">Value Engineering</div>
+            <p class="card-text">
+              Systematic review and optimisation of designs to balance safety, performance and cost.
+            </p>
+            <p class="card-text"><strong>Key benefits:</strong> Reduced material and construction costs, simplified construction, improved lifecycle value.</p>
+            <p class="card-text"><strong>Applications:</strong> Review of preliminary and third-party designs, projects with tight budgets or logistics.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Band -->
+    <section class="section-light">
+      <div class="container">
+        <div class="cta-band">
+          <div>
+            <div class="cta-band-title">Ready to discuss your next project?</div>
+            <div class="cta-band-text">
+              Share your plans with us and we’ll help you find the most efficient structural and architectural pathway from concept to construction.
+            </div>
+          </div>
+          <div class="cta-band-actions">
+            <a href="#contact" class="btn btn-primary">Request a Consultation</a>
+            <a href="https://wa.me/94769988181?text=Hello%20SPW%2C%20I%27d%20like%20to%20discuss%20a%20project." target="_blank" class="btn btn-secondary">
+              Chat on WhatsApp
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Contact SPW Engineering Consultants</h2>
+          <p class="section-subtitle">
+            Tell us about your project, site and timeline. Our team will get in touch to discuss the best way forward.
+          </p>
+        </div>
+
+        <div class="contact-grid">
+          <div>
+            <div class="contact-item">
+              <div class="contact-label">Address</div>
+              <div class="contact-value">1B/F9/U1, Lakhiru Sewana, Sri Saddarma Mw., Colombo 10, Sri Lanka</div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-label">Phone</div>
+              <div class="contact-value">+94 76 99 88 181</div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-label">Email</div>
+              <div class="contact-value">contact@spweng.lk</div>
+            </div>
+
+            <div style="margin-top:1.5rem;">
+              <div class="contact-label">Location Map</div>
+              <!-- Replace src with your actual Google Maps embed link if needed -->
+              <div style="margin-top:0.6rem; border-radius:16px; overflow:hidden; border:1px solid #e5e7eb;">
+                <iframe
+                  title="SPW Engineering Consultants Location"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d126742.43026670784!2d79.7744!3d6.9271!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae2596c96dfe9e5%3A0x7b4ac6082bfd7cd9!2sColombo%2010!5e0!3m2!1sen!2slk!4v0000000000000"
+                  width="100%" height="230" style="border:0;" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <form class="contact-form">
+              <div class="form-grid">
+                <div class="form-group">
+                  <label for="name">Name *</label>
+                  <input type="text" id="name" name="name" placeholder="Your full name" required>
+                </div>
+                <div class="form-group">
+                  <label for="email">Email *</label>
+                  <input type="email" id="email" name="email" placeholder="you@example.com" required>
+                </div>
+                <div class="form-group">
+                  <label for="phone">Phone</label>
+                  <input type="tel" id="phone" name="phone" placeholder="+94 7X XXX XXXX">
+                </div>
+                <div class="form-group">
+                  <label for="projectType">Project Type</label>
+                  <select id="projectType" name="projectType">
+                    <option value="">Select an option</option>
+                    <option>Residential</option>
+                    <option>Commercial</option>
+                    <option>Industrial</option>
+                    <option>Renovation &amp; Retrofit</option>
+                    <option>Other</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="message">Project Details *</label>
+                <textarea id="message" name="message" placeholder="Describe your project, site location and expected timeline..." required></textarea>
+              </div>
+
+              <button type="submit" class="btn btn-primary" style="margin-top:0.8rem; width:100%;">
+                Send Inquiry
+              </button>
+
+              <div class="form-note">
+                By submitting this form, you consent to SPW Engineering Consultants contacting you regarding your inquiry.
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-top">
+        <div>
+          <div class="logo" style="margin-bottom:0.8rem;">
+            <div class="logo-mark"><span>SPW</span></div>
+            <div>
+              <div style="font-size:0.86rem;">SPW ENGINEERING</div>
+              <div style="font-size:0.72rem; opacity:0.8;">Consultants</div>
+            </div>
+          </div>
+          <p style="max-width:380px; font-size:0.86rem;">
+            Structural and architectural consultancy for residential, commercial and industrial projects, delivering safe,
+            efficient and aesthetically refined designs across Sri Lanka.
+          </p>
+        </div>
+        <div>
+          <div class="footer-links">
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#services">Services</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+          </div>
+          <div style="font-size:0.8rem; color:#9ca3af;">
+            Phone: +94 76 99 88 181 · Email: contact@spweng.lk
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>© <span id="year"></span> SPW Engineering Consultants. All rights reserved.</div>
+        <div>Designed &amp; engineered for performance and clarity.</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- WhatsApp Floating Button -->
+  <a class="wa-floating" href="https://wa.me/94769988181?text=Hello%20SPW%2C%20I%27d%20like%20to%20discuss%20a%20project." target="_blank" aria-label="Chat on WhatsApp">
+    <span>🟢</span>
+    <span class="wa-floating-text">Chat on WhatsApp</span>
+  </a>
+
+  <!-- Scripts -->
+  <script>
+    // Mobile nav toggle
+    const navToggle = document.getElementById('navToggle');
+    const navMenu = document.getElementById('navMenu');
+
+    navToggle?.addEventListener('click', () => {
+      navMenu.classList.toggle('open');
+    });
+
+    // Close nav when clicking a link (mobile)
+    navMenu?.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        navMenu.classList.remove('open');
+      });
+    });
+
+    // Project category filtering (simple)
+    const tabPills = document.querySelectorAll('.tab-pill');
+    const projectCards = document.querySelectorAll('.project-card');
+
+    tabPills.forEach(tab => {
+      tab.addEventListener('click', () => {
+        const filter = tab.getAttribute('data-project-filter');
+
+        tabPills.forEach(t => t.classList.remove('active'));
+        tab.classList.add('active');
+
+        projectCards.forEach(card => {
+          if (!filter || filter === 'all') {
+            card.style.display = '';
+            return;
+          }
+          const categories = card.getAttribute('data-category') || '';
+          card.style.display = categories.includes(filter) ? '' : 'none';
+        });
+      });
+    });
+
+    // Project detail toggle
+    const projectFooters = document.querySelectorAll('.project-footer');
+    const projectDetailSections = document.querySelectorAll('.project-detail');
+
+    function clearDetails() {
+      projectDetailSections.forEach(sec => sec.classList.remove('active'));
+    }
+
+    projectFooters.forEach(footer => {
+      footer.addEventListener('click', () => {
+        const target = footer.getAttribute('data-detail-target');
+        if (!target) return;
+        const detailEl = document.getElementById('detail-' + target);
+        if (!detailEl) return;
+
+        const isActive = detailEl.classList.contains('active');
+        clearDetails();
+        if (!isActive) {
+          detailEl.classList.add('active');
+          detailEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      });
+    });
+
+    // Footer year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Simple client-side form handling (prevent actual submit for static site)
+    const contactForm = document.querySelector('.contact-form');
+    contactForm?.addEventListener('submit', (e) => {
+      e.preventDefault();
+      alert('Thank you for your inquiry. We will get back to you shortly.');
+      e.target.reset();
+    });
+  </script>
+</body>
+</html>
